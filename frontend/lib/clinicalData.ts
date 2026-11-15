@@ -1,0 +1,321 @@
+export const SEED_DRUGS = [
+  {
+    id: 1,
+    generic_name: "Ramipril",
+    brand_names: ["Cardace", "Altace", "Ramace", "Hopace"],
+    pharmacological_class: "ACE Inhibitor",
+    subclass: "Non-sulfhydryl ACE Inhibitor",
+    therapeutic_category: "Antihypertensive / Cardioprotective",
+    available_strengths: ["1.25 mg", "2.5 mg", "5 mg", "10 mg"],
+    dosage_forms: ["Tablet", "Capsule"],
+    routes: ["Oral"],
+    moa_simple: "Ramipril blocks an enzyme called ACE (Angiotensin-Converting Enzyme) that normally converts angiotensin I into angiotensin II. Angiotensin II narrows blood vessels and raises blood pressure. By blocking this conversion, ramipril relaxes and widens blood vessels, reducing blood pressure and the workload on the heart.",
+    moa_advanced: "Ramipril is a prodrug converted by hepatic esterases to its active diacid form, ramiprilat. Ramiprilat competitively inhibits ACE (peptidyl-dipeptide hydrolase, kininase II), preventing conversion of angiotensin I to angiotensin II. This reduces angiotensin II-mediated vasoconstriction, aldosterone secretion, and sympathetic activation. Simultaneously, bradykinin degradation is reduced, contributing to vasodilation via prostaglandin and nitric oxide pathways.",
+    molecular_targets: ["Angiotensin-Converting Enzyme (ACE / Kininase II)"],
+    receptors: [],
+    enzymes: ["ACE (Kininase II)"],
+    cellular_pathways: ["Renin-Angiotensin-Aldosterone System (RAAS)", "Bradykinin-Nitric Oxide Pathway"],
+    organ_sites: ["Vascular endothelium", "Kidney", "Heart"],
+    pharmacological_effects: ["Vasodilation", "Reduction in aldosterone secretion", "Reduction in left ventricular hypertrophy", "Renoprotective"],
+    approved_indications: ["Hypertension", "Heart failure post-MI", "Prevention of cardiovascular events in high-risk patients (HOPE trial)", "Diabetic nephropathy"],
+    off_label_indications: ["Prevention of new-onset diabetes in high-risk patients"],
+    clinical_considerations: "Requires monitoring of serum creatinine, potassium, and blood pressure after initiation and dose titration. Dry cough occurs in 10-30% of patients due to bradykinin accumulation.",
+    onset: "1-2 hours",
+    peak: "3-6 hours (ramiprilat)",
+    duration: "24 hours",
+    bioavailability: "28% (ramipril); ramiprilat ~44%",
+    protein_binding: "73% (ramiprilat)",
+    metabolism: "Hepatic esterase hydrolysis to active ramiprilat",
+    half_life: "Ramipril: ~1-2 hours; Ramiprilat: ~13-17 hours",
+    excretion: "Renal (60%), Faecal (40%)",
+    contraindications: [
+      "History of ACE inhibitor-induced angioedema",
+      "Hereditary or idiopathic angioedema",
+      "Bilateral renal artery stenosis",
+      "Pregnancy (all trimesters — Black Box Warning)",
+      "Concurrent use with sacubitril/valsartan"
+    ],
+    precautions: [
+      "Hyperkalemia risk — especially with potassium-sparing diuretics or CKD",
+      "Renal impairment — first-dose hypotension; monitor creatinine and potassium",
+      "Volume depletion"
+    ],
+    pregnancy_category: "Category D (Contraindicated due to fetotoxicity)",
+    lactation_safety: "Excreted in breast milk in small amounts; avoid use during lactation",
+    renal_considerations: "Dose reduction required for eGFR <30 mL/min/1.73m²: start at 1.25 mg once daily. Avoid if eGFR <10 (anuria).",
+    hepatic_considerations: "Conversion to active ramiprilat reduced in hepatic impairment; use with caution in severe hepatic disease.",
+    monitoring_requirements: ["Blood pressure", "Serum creatinine at 1-2 weeks", "Serum potassium", "Signs and symptoms of angioedema"],
+    evidence_citations: [
+      { source: "HOPE Trial (2000)", publisher: "NEJM", year: "2000", note: "Ramipril 10mg reduced CV death, MI, and stroke in high-risk patients" },
+      { source: "National Formulary of India (NFI) 2011", publisher: "Ministry of Health, GOI", year: "2011" }
+    ],
+    last_verified: "2026-02-15",
+    adrs: [
+      { id: 1, reaction_name: "Dry cough", organ_system: "Respiratory", severity: "Common", frequency: "10-30%", dose_related: false, mechanism: "Bradykinin and substance P accumulation in respiratory tract", management: "Discontinue ramipril; switch to ARB (e.g. losartan, telmisartan)" },
+      { id: 2, reaction_name: "Angioedema", organ_system: "Immunologic", severity: "Life-Threatening", frequency: "<0.5%", dose_related: false, mechanism: "Bradykinin-mediated vascular permeability", management: "IMMEDIATE DISCONTINUATION. Secure airway. Adrenaline 0.5 mg IM if severe." },
+      { id: 3, reaction_name: "Hyperkalaemia", organ_system: "Metabolic / Renal", severity: "Serious", frequency: "5-10%", dose_related: true, mechanism: "Reduced aldosterone secretion impairs potassium excretion", management: "Monitor potassium. Reduce or stop potassium supplements." }
+    ]
+  },
+  {
+    id: 2,
+    generic_name: "Losartan",
+    brand_names: ["Losacar", "Losartas", "Repace", "Cozaar"],
+    pharmacological_class: "Angiotensin II Receptor Blocker (ARB)",
+    subclass: "Non-peptide AT1 receptor antagonist",
+    therapeutic_category: "Antihypertensive / Renoprotective",
+    available_strengths: ["25 mg", "50 mg", "100 mg"],
+    dosage_forms: ["Tablet"],
+    routes: ["Oral"],
+    moa_simple: "Losartan blocks angiotensin II from binding to its AT1 receptor on blood vessels and adrenal gland, preventing vessel narrowing and aldosterone release without causing the dry cough seen with ACE inhibitors.",
+    moa_advanced: "Losartan is a selective, competitive antagonist of the AT1 receptor. It blocks angiotensin II regardless of synthesis pathway directly at its receptor. It also has a mild uricosuric effect (URAT-1 inhibition). Active metabolite EXP3174 is 10-40 times more potent than losartan.",
+    molecular_targets: ["Angiotensin II AT1 Receptor"],
+    receptors: ["AT1 Receptor"],
+    enzymes: [],
+    cellular_pathways: ["Renin-Angiotensin-Aldosterone System (RAAS)"],
+    organ_sites: ["Vascular smooth muscle", "Adrenal cortex", "Kidney"],
+    pharmacological_effects: ["AT1-mediated vasodilation", "Reduction in aldosterone", "Mild uricosuric effect"],
+    approved_indications: ["Hypertension", "Stroke risk reduction in hypertension with LVH (LIFE trial)", "Diabetic nephropathy with proteinuria in T2DM"],
+    off_label_indications: ["ACE inhibitor cough alternative", "Marfan syndrome"],
+    clinical_considerations: "Does NOT cause bradykinin-related dry cough — key advantage over ACE inhibitors.",
+    onset: "1-3 hours",
+    peak: "6 hours (EXP3174)",
+    duration: "24 hours",
+    bioavailability: "33%",
+    protein_binding: ">98%",
+    metabolism: "CYP2C9 and CYP3A4 to active metabolite EXP3174",
+    half_life: "Losartan: 2 hours; EXP3174: 6-9 hours",
+    excretion: "Renal (35%), Faecal (60%)",
+    contraindications: ["Pregnancy (Black Box Warning)", "Hypersensitivity to losartan", "Bilateral renal artery stenosis"],
+    precautions: ["Hyperkalemia", "Renal impairment", "Volume depletion"],
+    pregnancy_category: "Category D (Contraindicated)",
+    lactation_safety: "Not recommended during lactation",
+    renal_considerations: "No dose adjustment needed for mild-moderate renal impairment. Monitor potassium and creatinine.",
+    hepatic_considerations: "Reduced conversion to EXP3174; start at 25 mg in hepatic impairment.",
+    monitoring_requirements: ["Blood pressure", "Serum creatinine", "Serum potassium"],
+    evidence_citations: [
+      { source: "LIFE Trial (2002)", publisher: "Lancet", year: "2002", note: "Superior stroke reduction in LVH hypertension" },
+      { source: "RENAAL Trial (2001)", publisher: "NEJM", year: "2001", note: "Renal endpoint reduction in diabetic nephropathy" }
+    ],
+    last_verified: "2026-02-15",
+    adrs: [
+      { id: 4, reaction_name: "Hyperkalaemia", organ_system: "Metabolic", severity: "Serious", frequency: "5-10%", dose_related: true, mechanism: "Reduced aldosterone impairs renal potassium excretion", management: "Monitor potassium. Adjust dose as needed." },
+      { id: 5, reaction_name: "Dizziness", organ_system: "Neurological", severity: "Common", frequency: "3-6%", dose_related: true, management: "Counsel patient on slow positional changes." }
+    ]
+  },
+  {
+    id: 3,
+    generic_name: "Metformin",
+    brand_names: ["Glycomet", "Glucophage", "Obimet"],
+    pharmacological_class: "Biguanide",
+    subclass: "Insulin Sensitizer",
+    therapeutic_category: "Antidiabetic / Metabolic Agent",
+    available_strengths: ["500 mg", "850 mg", "1000 mg"],
+    dosage_forms: ["Tablet (IR)", "Tablet (SR/XR)"],
+    routes: ["Oral"],
+    moa_simple: "Metformin reduces glucose production in the liver and improves insulin sensitivity in muscles and fat. It does NOT stimulate insulin secretion from the pancreas, so it does not cause hypoglycaemia when used alone.",
+    moa_advanced: "Metformin activates AMP-activated protein kinase (AMPK) in hepatocytes via mild inhibition of mitochondrial Complex I. This inhibits hepatic gluconeogenesis and enhances peripheral insulin sensitivity and GLUT-4 translocation without direct beta-cell stimulation.",
+    molecular_targets: ["AMPK", "Mitochondrial Complex I"],
+    receptors: [],
+    enzymes: ["Mitochondrial Complex I (inhibition)"],
+    cellular_pathways: ["AMPK signalling pathway", "Hepatic gluconeogenesis inhibition"],
+    organ_sites: ["Liver (primary)", "Skeletal muscle", "Intestine"],
+    pharmacological_effects: ["Reduction in fasting blood glucose", "Insulin sensitization", "Modest weight reduction", "No hypoglycaemia monotherapy"],
+    approved_indications: ["Type 2 diabetes mellitus (first-line)", "Prediabetes"],
+    off_label_indications: ["Polycystic Ovary Syndrome (PCOS)", "Weight management in insulin resistance"],
+    clinical_considerations: "First-line pharmacotherapy for Type 2 DM worldwide. Demonstrated macrovascular benefit in UKPDS.",
+    onset: "1-2 hours",
+    peak: "2-3 hours",
+    duration: "12 hours (IR); 24 hours (XR)",
+    bioavailability: "50-60%",
+    protein_binding: "Negligible",
+    metabolism: "Not metabolized by CYP enzymes; excreted unchanged",
+    half_life: "Plasma: 4-9 hours",
+    excretion: "Renal (90% unchanged) — CRITICAL in renal impairment",
+    contraindications: [
+      "eGFR < 30 mL/min/1.73m² (CONTRAINDICATED — lactic acidosis risk)",
+      "Acute or chronic metabolic acidosis (including DKA)",
+      "Severe hepatic impairment",
+      "IV iodinated contrast media use (hold 48h before/after if eGFR 30-60)"
+    ],
+    precautions: ["eGFR 30-45: use max 1000mg/day", "Vitamin B12 deficiency with long-term use", "Alcohol excess increases lactic acidosis risk"],
+    pregnancy_category: "Safe in gestational diabetes with clinical monitoring",
+    lactation_safety: "Compatible with breastfeeding",
+    renal_considerations: "eGFR ≥60: full dose. eGFR 45-59: max 1500mg/day. eGFR 30-44: max 1000mg/day. eGFR <30: CONTRAINDICATED.",
+    hepatic_considerations: "Avoid in severe hepatic impairment due to impaired lactate clearance.",
+    monitoring_requirements: ["HbA1c 3-6 monthly", "eGFR at baseline and at least annually", "Serum B12 after 4 years of use"],
+    evidence_citations: [
+      { source: "UKPDS 34 (1998)", publisher: "Lancet", year: "1998", note: "Metformin reduced macrovascular events in overweight T2DM" },
+      { source: "ADA Standards of Care 2026", publisher: "ADA", year: "2026" }
+    ],
+    last_verified: "2026-02-15",
+    adrs: [
+      { id: 6, reaction_name: "Gastrointestinal upset (nausea, diarrhoea)", organ_system: "Gastrointestinal", severity: "Common", frequency: "20-30%", dose_related: true, mechanism: "Delayed glucose absorption and local gut motility effects", management: "Take with food. Titrate slowly. Switch to XR formulation." },
+      { id: 7, reaction_name: "Lactic acidosis", organ_system: "Metabolic", severity: "Life-Threatening", frequency: "<0.001%", dose_related: false, mechanism: "Mitochondrial inhibition with lactate accumulation in renal failure", management: "EMERGENCY. Stop metformin immediately. Haemodialysis. ICU care." },
+      { id: 8, reaction_name: "Vitamin B12 deficiency", organ_system: "Haematologic", severity: "Moderate", frequency: "7-30%", dose_related: true, mechanism: "Impaired ileal B12-intrinsic factor absorption", management: "Annual B12 monitoring; oral or IM supplementation." }
+    ]
+  },
+  {
+    id: 4,
+    generic_name: "Amlodipine",
+    brand_names: ["Amlopress", "Stamlo", "Norvasc"],
+    pharmacological_class: "Calcium Channel Blocker (CCB)",
+    subclass: "Dihydropyridine CCB",
+    therapeutic_category: "Antihypertensive / Anti-anginal",
+    available_strengths: ["2.5 mg", "5 mg", "10 mg"],
+    dosage_forms: ["Tablet"],
+    routes: ["Oral"],
+    moa_simple: "Amlodipine blocks calcium channels in blood vessel walls, relaxing and widening arteries. This lowers blood pressure and increases oxygen delivery to the heart without slowing heart rate.",
+    moa_advanced: "Amlodipine selectively blocks voltage-gated L-type calcium channels (Cav1.2) in vascular smooth muscle with very slow association and dissociation kinetics. This produces smooth arteriolar vasodilation, reduces total peripheral resistance, and minimizes reflex tachycardia.",
+    molecular_targets: ["L-type Calcium Channel (Cav1.2)"],
+    receptors: ["L-type Calcium Channel"],
+    enzymes: [],
+    cellular_pathways: ["Excitation-contraction coupling"],
+    organ_sites: ["Vascular smooth muscle", "Coronary arteries"],
+    pharmacological_effects: ["Peripheral vasodilation", "Coronary vasodilation", "Afterload reduction"],
+    approved_indications: ["Hypertension", "Chronic stable angina", "Vasospastic (Prinzmetal) angina"],
+    off_label_indications: ["Raynaud phenomenon"],
+    clinical_considerations: "Very long half-life (~35-50h) ensures 24-hour BP control even with delayed doses. First-line for elderly and isolated systolic hypertension.",
+    onset: "2-3 hours", peak: "6-12 hours", duration: "24-48 hours",
+    bioavailability: "64-90%", protein_binding: "97%", metabolism: "Hepatic CYP3A4",
+    half_life: "35-50 hours", excretion: "Renal (inactive metabolites)",
+    contraindications: ["Cardiogenic shock", "Severe aortic stenosis", "Known hypersensitivity"],
+    precautions: ["Dose-dependent peripheral ankle oedema", "Severe hepatic impairment"],
+    pregnancy_category: "Category C", lactation_safety: "Avoid if possible",
+    renal_considerations: "No dose adjustment required in renal impairment or dialysis.",
+    hepatic_considerations: "Reduce starting dose to 2.5 mg in severe hepatic impairment.",
+    monitoring_requirements: ["Blood pressure", "Ankle oedema assessment"],
+    evidence_citations: [
+      { source: "ASCOT-BPLA (2005)", publisher: "Lancet", year: "2005" },
+      { source: "ACCOMPLISH Trial (2008)", publisher: "NEJM", year: "2008" }
+    ],
+    last_verified: "2026-02-15",
+    adrs: [
+      { id: 9, reaction_name: "Peripheral ankle oedema", organ_system: "Cardiovascular", severity: "Common", frequency: "10-20% at 10mg", dose_related: true, mechanism: "Preferential precapillary arteriolar dilation increasing hydrostatic pressure", management: "Reduce dose. Add ACEi/ARB (efferent venodilation balances capillary pressure)." },
+      { id: 10, reaction_name: "Flushing & headache", organ_system: "Vascular", severity: "Common", frequency: "3-8%", dose_related: true, management: "Usually transient; reassure patient." }
+    ]
+  },
+  {
+    id: 5,
+    generic_name: "Furosemide",
+    brand_names: ["Lasix", "Frusenex"],
+    pharmacological_class: "Loop Diuretic",
+    subclass: "Sulfonamide loop diuretic",
+    therapeutic_category: "Diuretic / Antiedematous",
+    available_strengths: ["20 mg", "40 mg", "80 mg"],
+    dosage_forms: ["Tablet", "Injection (IV/IM)"],
+    routes: ["Oral", "IV", "IM"],
+    moa_simple: "Furosemide blocks the NKCC2 transporter in the loop of Henle in kidneys, preventing reabsorption of salt and water. This produces rapid, potent fluid removal through urine.",
+    moa_advanced: "Furosemide inhibits the Na+-K+-2Cl- cotransporter (NKCC2) in the luminal membrane of the thick ascending limb of Henle's loop. This abolishes the corticomedullary osmotic gradient, producing marked natriuresis, chloruresis, kaliuresis, and water diuresis. Also stimulates renal prostaglandin release causing rapid venodilation.",
+    molecular_targets: ["NKCC2 Cotransporter (SLC12A1)"],
+    receptors: [], enzymes: [],
+    cellular_pathways: ["Renal tubular ion transport", "Renal prostaglandin synthesis"],
+    organ_sites: ["Kidney (Thick Ascending Limb)", "Systemic venous system"],
+    pharmacological_effects: ["Potent diuresis and natriuresis", "Preload reduction", "Relief of pulmonary congestion"],
+    approved_indications: ["Acute pulmonary oedema", "Heart failure oedema", "Renal oedema", "Hepatic cirrhosis ascites (with spironolactone)"],
+    off_label_indications: ["Severe hypercalcaemia"],
+    clinical_considerations: "Rapid IV onset (5-15 min) makes it foundational in acute heart failure. Higher oral doses needed in CKD due to reduced tubular secretion.",
+    onset: "Oral: 30-60 min; IV: 5-15 min", peak: "Oral: 1-2h; IV: 30 min", duration: "Oral: 6-8h; IV: 2-3h",
+    bioavailability: "10-100% (variable)", protein_binding: ">99%", metabolism: "Minimal hepatic glucuronidation",
+    half_life: "0.5-2 hours (prolonged in renal failure)", excretion: "Renal tubular secretion",
+    contraindications: ["Anuria", "Hepatic coma/pre-coma", "Severe electrolyte depletion", "Severe hypovolaemia"],
+    precautions: ["Hypokalaemia (arrhythmia risk, especially with digoxin)", "Dehydration/prerenal AKI", "Ototoxicity with rapid IV push", "Hyperuricaemia/gout trigger"],
+    pregnancy_category: "Category C", lactation_safety: "May suppress lactation",
+    renal_considerations: "Effective even in low GFR; higher doses (80-240 mg/day) required to overcome reduced tubular secretion.",
+    hepatic_considerations: "Caution in cirrhosis; rapid electrolyte shifts can trigger hepatic encephalopathy.",
+    monitoring_requirements: ["Serum electrolytes (Na, K, Mg)", "Renal function (creatinine, BUN)", "Urine output", "Daily weight"],
+    evidence_citations: [
+      { source: "ESC Heart Failure Guidelines 2021", publisher: "ESC", year: "2021" },
+      { source: "NFI 2011", publisher: "Ministry of Health, GOI", year: "2011" }
+    ],
+    last_verified: "2026-02-15",
+    adrs: [
+      { id: 11, reaction_name: "Hypokalaemia", organ_system: "Metabolic", severity: "Serious", frequency: "10-20%", dose_related: true, mechanism: "Increased distal sodium delivery triggers aldosterone-mediated potassium loss", management: "Potassium replacement or co-prescribe spironolactone." },
+      { id: 12, reaction_name: "Ototoxicity (hearing loss, tinnitus)", organ_system: "Special Senses", severity: "Serious", frequency: "<1%", dose_related: true, mechanism: "NKCC inhibition in stria vascularis of inner ear", management: "Administer slow IV (max 4mg/min); avoid concurrent aminoglycosides." }
+    ]
+  }
+]
+
+export const SEED_INTERACTIONS = [
+  {
+    drug_a: "Ramipril",
+    drug_b: "Spironolactone",
+    severity: "Major",
+    interaction_type: "PD",
+    mechanism: "Additive suppression of aldosterone-mediated renal potassium excretion.",
+    clinical_effect: "Life-threatening hyperkalaemia, especially in CKD or diabetic nephropathy.",
+    management: "Monitor potassium at 1 week, 1 month, then quarterly. Avoid if eGFR <30 or K+ >5.0 mEq/L.",
+    evidence_source: "RALES Trial / ESC Guidelines"
+  },
+  {
+    drug_a: "Ramipril",
+    drug_b: "NSAIDs (Ibuprofen / Diclofenac)",
+    severity: "Major",
+    interaction_type: "PD",
+    mechanism: "NSAIDs block afferent arteriolar prostaglandin vasodilation while ACEi blocks efferent constriction.",
+    clinical_effect: "Acute reduction in glomerular filtration pressure, precipitating acute kidney injury.",
+    management: "Avoid regular NSAIDs in patients taking ACE inhibitors, particularly in CKD or heart failure.",
+    evidence_source: "BNF 86 / Kidney International"
+  },
+  {
+    drug_a: "Metformin",
+    drug_b: "IV Iodinated Contrast Media",
+    severity: "Major",
+    interaction_type: "PK",
+    mechanism: "Contrast nephropathy acutely impairs renal clearance of metformin, risking drug accumulation.",
+    clinical_effect: "Metformin-associated lactic acidosis (MALA).",
+    management: "Withhold metformin 48 hours prior to elective contrast procedures in eGFR 30-60; restart after rechecking renal function.",
+    evidence_source: "ESUR Contrast Guidelines 2023"
+  },
+  {
+    drug_a: "Furosemide",
+    drug_b: "Gentamicin",
+    severity: "Major",
+    interaction_type: "PD",
+    mechanism: "Additive cochlear hair cell and stria vascularis toxicity.",
+    clinical_effect: "Irreversible sensorineural hearing loss, tinnitus, and vestibular impairment.",
+    management: "Avoid concurrent use where possible. If mandatory, avoid rapid IV furosemide and monitor trough gentamicin levels.",
+    evidence_source: "NFI 2011 / Clinical Pharmacokinetics"
+  },
+  {
+    drug_a: "Ramipril",
+    drug_b: "Losartan",
+    severity: "Major",
+    interaction_type: "PD",
+    mechanism: "Dual RAAS blockade causes excessive hypotension and hyperkalaemia without added cardiovascular benefit.",
+    clinical_effect: "Increased incidence of renal impairment, hyperkalaemia, and syncope.",
+    management: "Combination is not recommended (ONTARGET trial evidence).",
+    evidence_source: "ONTARGET Trial, NEJM 2008"
+  }
+]
+
+export const SEED_IV_COMPATIBILITY = [
+  {
+    drug_a: "Furosemide",
+    drug_b: "Gentamicin",
+    diluent: "0.9% Normal Saline",
+    status: "Incompatible",
+    physical_compatibility: "Precipitate formation",
+    chemical_compatibility: "Degradation potential",
+    notes: "Do not infuse through the same IV line. Flush line thoroughly between administrations.",
+    source: "Trissel's Handbook on Injectable Drugs"
+  },
+  {
+    drug_a: "Furosemide",
+    drug_b: "Morphine",
+    diluent: "0.9% Normal Saline",
+    status: "Incompatible",
+    physical_compatibility: "Immediate precipitation",
+    notes: "Physical incompatibility — do not mix in syringe or Y-site.",
+    source: "King Guide to Parenteral Admixtures"
+  },
+  {
+    drug_a: "Morphine",
+    drug_b: "Ondansetron",
+    diluent: "0.9% Normal Saline",
+    status: "Compatible",
+    physical_compatibility: "Clear, no precipitation",
+    chemical_compatibility: "Stable for 4 hours at room temperature",
+    notes: "Physically compatible at standard clinical concentrations for Y-site administration.",
+    source: "Trissel's Handbook on Injectable Drugs"
+  }
+]
